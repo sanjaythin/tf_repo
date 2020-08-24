@@ -14,3 +14,9 @@ module "vpc" {
   }
 }
 
+backend "s3" {
+  bucket = "tf-learn-sample"
+  key = "state"
+  dynamodb_table = "tf-learn-sample"
+}
+
