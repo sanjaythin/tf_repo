@@ -18,6 +18,9 @@ terraform {
   backend "s3" {
     bucket = "tf-learn-sample"
     key = "state"
+    region = "ap-south-1"
     dynamodb_table = "tf-learn-sample"
+    shared_credentials_file = "/Users/sanjayv/.aws/credentials"
+    profile                 = "user1"
   }
 }
